@@ -3,7 +3,7 @@ import { Home, Users, Newspaper, DollarSign, ImageIcon, Phone, Menu, X } from 'l
 import Header from './components/Header';
 import RealtimeStatus from './components/RealtimeStatus';
 import LiveChat from './components/LiveChat';
-import LivePengumuman from './components/LivePengumuman';
+import NotificationPanel from './components/NotificationPanel';
 import Beranda from './pages/Beranda';
 import Struktur from './pages/Struktur';
 import Berita from './pages/Berita';
@@ -39,7 +39,6 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header currentPage={currentPage} onNavigate={setCurrentPage} />
-      <LivePengumuman />
       <main className="pb-8">
         {renderPage()}
       </main>
@@ -61,6 +60,7 @@ function App() {
       
       {/* Realtime Components */}
       <RealtimeStatus />
+      <NotificationPanel />
       <LiveChat />
     </div>
   );
